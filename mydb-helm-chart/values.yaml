@@ -1,0 +1,15 @@
+mysql:
+  image:
+    repository: mysql
+    tag: 5.7
+  rootPassword: admin123
+  database: testdb
+  user: dev
+  password: admin123
+  port: 3306
+
+dbeaver:
+  image:
+    repository: dbeaver/dbeaver-ce
+    tag: latest
+  workspaceVolumeSize: 1Gi

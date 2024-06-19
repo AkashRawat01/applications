@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "mydb-chart.fullname" . }}-dbeaver
+  labels:
+    app: dbeaver
+spec:
+  ports:
+    - port: 0 # Auto-assign a port
+      targetPort: dbeaver
+  selector:
+    app: dbeaver
