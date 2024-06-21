@@ -12,4 +12,4 @@ data:
     [server]
     root_url = %(protocol)s://%(domain)s:%(http_port)s/
   config.monitoring: |-
-    {{ .Files.Get "grafana/config.monitoring" | indent 4 }}
+{{ .Files.Get "grafana/config.monitoring" | indent 4 }}
