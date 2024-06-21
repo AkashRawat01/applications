@@ -36,5 +36,9 @@ kind: Service
 metadata:
   name: grafana
 spec:
+  selector:
+    app: grafana
   ports:
-    - port
+    - name: http
+      port: 80
+      targetPort: 3000
