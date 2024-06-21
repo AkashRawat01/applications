@@ -6,4 +6,4 @@ metadata:
     app: grafana
 data:
   datasource.yml: |-
-    {{ .Files.Get "grafana/provisioning/datasources/datasource.yml" | indent 4 }}
+{{ .Files.Get "grafana/provisioning/datasources/datasource.yml" | indent 4 }}
