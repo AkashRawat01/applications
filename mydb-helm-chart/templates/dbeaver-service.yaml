@@ -6,7 +6,7 @@ metadata:
     app: dbeaver
 spec:
   ports:
-    - port: 0 # Auto-assign a port
+    - port: 7070 # Auto-assign a port
       targetPort: dbeaver
   selector:
     app: dbeaver

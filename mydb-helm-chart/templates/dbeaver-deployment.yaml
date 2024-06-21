@@ -18,7 +18,7 @@ spec:
         - name: dbeaver
           image: {{ .Values.dbeaver.image.repository }}:{{ .Values.dbeaver.image.tag }}
           ports:
-            - containerPort: 0 # Auto-assign a port
+            - containerPort: 7070 # Auto-assign a port
               name: dbeaver
           volumeMounts:
             - name: dbeaver-workspace
