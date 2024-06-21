@@ -31,7 +31,7 @@ spec:
             name: prometheus-config
         - name: data
           persistentVolumeClaim:
-            claimName: prometheus-data
+            claimName: prometheusdata
 ---
 apiVersion: v1
 kind: Service
