@@ -8,6 +8,6 @@ spec:
   type: LoadBalancer
   ports:
     - port: 80 # Auto-assign a port
-      targetPort: dbeaver
+      targetPort: 8978
   selector:
     app: dbeaver
