@@ -10,6 +10,6 @@ mysql:
 
 dbeaver:
   image:
-    repository: dbeaver/dbeaver-ce
+    repository: dbeaver/cloudbeaver
     tag: latest
   workspaceVolumeSize: 1Gi
