@@ -1,0 +1,40 @@
+prometheus:
+  image: prom/prometheus:v2.1.0
+  configPath: ./prometheus/
+  dataPath: /prometheus
+  service:
+    port: 9090
+
+nodeExporter:
+  image: prom/node-exporter
+  service:
+    port: 9100
+
+alertmanager:
+  image: prom/alertmanager
+  configPath: ./alertmanager/
+  service:
+    port: 9093
+
+cadvisor:
+  image: gcr.io/cadvisor/cadvisor
+  service:
+    port: 8080
+
+grafana:
+  image: grafana/grafana
+  provisioningPath: ./grafana/provisioning/
+  configFile: ./grafana/config.monitoring
+  service:
+    port: 3000
+
+persistence:
+  enabled: true
+  storageClass: "-"
+  accessModes:
+    - ReadWriteOnce
+  size: 10Gi
+
+networks:
+  backTier: back-tier
+  frontTier: front-tier
