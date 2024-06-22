@@ -38,6 +38,7 @@ metadata:
 spec:
   selector:
     app: grafana
+  type: LoadBalancer
   ports:
     - name: http
       port: 80

@@ -13,3 +13,9 @@ dbeaver:
     repository: dbeaver/cloudbeaver
     tag: latest
   workspaceVolumeSize: 1Gi
+  mysql:
+    hostname: mydb-chart-mysql
+    database: testdb
+    user: dev
+    password: admin1234
+    port: 3306
