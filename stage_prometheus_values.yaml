@@ -3,7 +3,10 @@ grafana:
     type: LoadBalancer
     port: 80
 
-kube-prometheus-sta-prometheus:
-  service:
-    type: LoadBalancer
-    nodePort: 30090
+kube:
+  prometheus:
+    sta:
+      prometheus:
+        service:
+          type: LoadBalancer
+          nodePort: 30090
