@@ -1,5 +1,5 @@
 prometheus:
-  image: prom/prometheus:v2.1.0
+  image: prom/prometheus:latest
   configPath: ./prometheus/
   dataPath: /prometheus
   service:
@@ -30,10 +30,10 @@ grafana:
 
 persistence:
   enabled: true
-  storageClass: ""
+  storageClass: "hostpath"
   accessModes:
     - ReadWriteOnce
-  size: 10Gi
+  size: 5Gi
 
 networks:
   backTier: back-tier

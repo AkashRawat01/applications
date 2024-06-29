@@ -26,7 +26,7 @@ spec:
       volumes:
         - name: data
           persistentVolumeClaim:
-            claimName: grafanadata
+            claimName: grafana-data
         - name: provisioning
           configMap:
             name: grafana-provisioning

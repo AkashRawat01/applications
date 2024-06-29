@@ -31,13 +31,14 @@ spec:
             name: prometheus-config
         - name: data
           persistentVolumeClaim:
-            claimName: prometheusdata
+            claimName: prometheus-data
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: prometheus
 spec:
+  type: LoadBalancer
   ports:
     - port: {{ .Values.prometheus.service.port }}
       targetPort: 9090

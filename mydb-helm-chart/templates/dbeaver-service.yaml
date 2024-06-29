@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "mydb-chart.fullname" . }}-dbeaver
+  namespace : {{ .Values.namespace}}
   labels:
     app: dbeaver
 spec:

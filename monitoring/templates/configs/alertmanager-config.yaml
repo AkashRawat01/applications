@@ -4,4 +4,4 @@ metadata:
   name: alertmanager-config
 data:
   config.yml: |-
-    # Alertmanager configuration file content
+{{ .Files.Get "alertmanager/config.yml" | indent 4 }}

@@ -3,5 +3,7 @@ kind: ConfigMap
 metadata:
   name: prometheus-config
 data:
+  alert.rules: |-
+{{ .Files.Get "prometheus/alert.rules" | indent 4 }}
   prometheus.yml: |-
-    # Prometheus configuration file content
+{{ .Files.Get "prometheus/prometheus.yml" | indent 4 }}
