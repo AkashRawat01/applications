@@ -1,4 +1,0 @@
-apiVersion: v2
-name: mydb-chart
-description: A Helm chart for deploying MySQL and DBeaver
-version: 1.0.0
