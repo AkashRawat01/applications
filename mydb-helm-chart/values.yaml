@@ -25,3 +25,4 @@ service:
   protocol: TCP
   nodePort: 30008
   
+namespace : application
